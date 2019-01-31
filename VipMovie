@@ -1,0 +1,87 @@
+<html>
+<head>
+<meta charset="UTF-8">	
+	<style type="text/css">
+		input{
+			height: 50px;
+		}
+		
+		
+	</style>
+  <SCRIPT LANGUAGE="JavaScript">
+    
+        function fnChange(){
+        }
+        function onClear(){
+                document.getElementById("vipurl").value="";
+        }
+        function onPlay(){
+                var oJK = document.getElementById("jk");
+                var sJK=oJK.options[oJK.selectedIndex].value;
+                var sVipUrl = document.getElementById("vipurl").value;
+                var oWin = document.getElementById("play");
+                var a=document.getElementById("AllScreen");
+                if (sVipUrl.length>0){
+                        oWin.src=sJK + sVipUrl;
+                        a.href=sJK + sVipUrl;
+                }
+             
+        }
+   
+  </SCRIPT>
+  <title> VIP电影视频解析  </title>
+</head>
+<body  charset="utf-8">
+<table  width="100%" align="center" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+        <td height="9">
+                <form method="post" action="">
+                <select name="jk" id="jk" size=1 onchange="fnChange()" style="height: 100px; font-size: 60px;">
+                        <option value="http://api.baiyug.cn/vip/index.php?url=" selected>万能线路1</option>
+                        <option value="http://www.vipjiexi.com/yun.php?url=" >万能线路2</option>
+                        <option value="http://api.1008net.com/v.php?url=" >万能线路3</option>
+                        <option value="http://www.ibb6.com/jx/?url=">万能接口1</option>
+			            <option value="http://jqaaa.com/jx.php?url=">万能接口2</option>	
+                        <option value="http://jiexi.071811.cc/jx2.php?url=">万能接口3</option>
+                        <option value="http://jqaaa.com/jq3/?url=&url=">万能接口4</option>
+                        <option value="http://yun.baiyug.cn/vip/index.php?url=">万能接口5</option>                     
+			            <option value="http://www.wocao.xyz/index.php?url=">腾讯视频接口1</option>	
+			            <option value="https://vip.hackmg.com/jx/index.php?url=">爱奇艺超清接口1</option>
+                        <option value="http://api.baiyug.cn/vip/index.php?url=">爱奇艺超清接口2</option>
+                        <option value="http://jiexi.92fz.cn/player/vip.php?url=">爱奇艺超清接口3</option>
+                        <option value="http://jx.ovov.cc/?url=">芒果TV超清接口</option>
+                        <option value="http://jx.618ge.com/?url=">芒果TV手机接口</option>
+                        <option value="http://vip.jlsprh.com/?url=">优酷超清接口</option>
+			            <option value="http://vip.jlsprh.com/index.php?url=">搜狐视频接口</option>
+                        <option value="http://jx.598110.com/?url=">乐视视频接口</option>
+                        <option value="http://jx.618g.com/?url=" >万能线路4</option>
+                        <option value="https://cdn.yangju.vip/k/?url=" >万能线路5</option>
+                        <option value="https://vip.mpos.ren/v/?url=" >万能线路6</option>
+                        <option value="https://api.653520.top/vip/?url=" >万能线路7</option>
+                        <option value="https://jx.km58.top/jx/?url=" >万能线路8</option>
+                        <option value="http://jx.cmbzzs.cn/jx.php/?url=" >万能线路9</option>
+                        <option value="http://api.greatchina56.com/?url=" >万能线路10</option>
+                        <option value="http://jx.sdjnd09.cn/jx.php/?url=" >万能线路11</option>
+                                             
+                                                
+                     
+                </select>
+                <input style="font-size: 80px;height: auto;" type="text" name="vipurl" id="vipurl" size=40 placeholder="将要解析的视频URL地址放到输入框" >
+                <input  type="button" value="播放" onclick="onPlay()" style="width: 240px;background-color:aquamarine; font-size: 60px;color: white;height: auto;">
+                <input type="button" value="清除" onclick="onClear()" style="width: 240px; background-color: red; font-size: 60px;color: white;height: auto;">
+              </br>  </br><span style="color:darkturquoise;font-size: 60px;">不能播放的话可以换成不同的线路或者接口试试(如果有广告请不要点击)</span></br>
+                <a style="font-size: 90px;" id="AllScreen" href="">点击可转到全屏页面</a>
+         </form>
+        </td>
+</tr>
+<tr>
+        <td><iframe src="" name="play" id="play" width="65%" align="center" height="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe></td>
+
+</table>
+<div id="foot" style="position: absolute;bottom:0px;left:500px;">
+<footer>All the interfaces are from the Internet</footer>
+<footer>Design By @Mango-Lee </footer>
+<footer>Only to test</footer>
+</div>
+</body>
+</html>
